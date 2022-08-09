@@ -1,7 +1,8 @@
 ﻿using GraphQL.Domain;
+using GraphQL.Infrastructure.GraphQL.TypeSystem.Types;
 using GraphQL.Types;
 
-namespace GraphQL.Infrastructure
+namespace GraphQL.Infrastructure.GraphQL.TypeSystem.Input
 {
     internal class ProdutoInput : InputObjectGraphType<Produto>
     {

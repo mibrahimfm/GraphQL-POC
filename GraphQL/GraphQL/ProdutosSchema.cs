@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Http;
 using System;
 
-namespace GraphQL.Infrastructure
+namespace GraphQL.Infrastructure.GraphQL
 {
-    internal class ProdutosSchema : global::GraphQL.Types.Schema
+    internal class ProdutosSchema : Types.Schema
     {
         public ProdutosSchema(ProdutoRepository produtoRepository, IServiceProvider services) : base(services)
         {

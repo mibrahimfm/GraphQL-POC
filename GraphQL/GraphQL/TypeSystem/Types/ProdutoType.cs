@@ -1,9 +1,9 @@
 ﻿using GraphQL.Domain;
 using GraphQL.Types;
 
-namespace GraphQL.Infrastructure
+namespace GraphQL.Infrastructure.GraphQL.TypeSystem.Types
 {
-         class ProdutoType : ObjectGraphType<Produto>
+    class ProdutoType : ObjectGraphType<Produto>
     {
         public ProdutoType()
         {

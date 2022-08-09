@@ -1,7 +1,7 @@
 ﻿using GraphQL.Domain;
 using GraphQL.Types;
 
-namespace GraphQL.Infrastructure
+namespace GraphQL.Infrastructure.GraphQL.TypeSystem.Input
 {
     internal class PrecoInput : InputObjectGraphType<Preco>
     {

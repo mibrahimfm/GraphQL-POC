@@ -1,9 +1,10 @@
 ﻿using GraphQL.Domain;
+using GraphQL.Infrastructure.GraphQL.TypeSystem.Types;
 using GraphQL.Infrastructure.Repository;
 using GraphQL.Types;
 using System.Collections.Generic;
 
-namespace GraphQL.Infrastructure
+namespace GraphQL.Infrastructure.GraphQL
 {
     internal class ProdutosQuery : ObjectGraphType
     {

@@ -1,9 +1,11 @@
 ﻿using GraphQL.Domain;
+using GraphQL.Infrastructure.GraphQL.TypeSystem.Input;
+using GraphQL.Infrastructure.GraphQL.TypeSystem.Types;
 using GraphQL.Infrastructure.Repository;
 using GraphQL.Types;
 using System.Collections.Generic;
 
-namespace GraphQL.Infrastructure
+namespace GraphQL.Infrastructure.GraphQL
 {
     internal class ProdutosMutation : ObjectGraphType
     {
@@ -19,7 +21,7 @@ namespace GraphQL.Infrastructure
                     Produto produto = context.GetArgument<Produto>("produto");
 
                     List<Produto> resultado = produtoRepository.Incluir(produto);
-                    return resultado;                    
+                    return resultado;
                 },
                 description: "Mutation para incluir produto"
                 );
@@ -27,7 +29,7 @@ namespace GraphQL.Infrastructure
             Field<ProdutoType>("alterarPreco",
                 arguments:
                 new QueryArguments(
-                    new QueryArgument<StringGraphType> { Name = "codigo", Description = "Código do produto que deseja alterar"},
+                    new QueryArgument<StringGraphType> { Name = "codigo", Description = "Código do produto que deseja alterar" },
                     new QueryArgument<NonNullGraphType<PrecoInput>> { Name = "preco", Description = "Novo preço do produto" }
                     ),
                 resolve: context =>
@@ -36,7 +38,7 @@ namespace GraphQL.Infrastructure
                     Preco preco = context.GetArgument<Preco>("preco");
 
                     Produto resultado = produtoRepository.AlterarPreco(codigo, preco);
-                    return resultado;                    
+                    return resultado;
                 });
 
             Field<ProdutoType>("excluirProduto",
