@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL-POC", "GraphQL-POC\GraphQL-POC.csproj", "{ABB58B0A-C141-4626-A164-88A2B2D063FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3D14A518-7B83-4845-A88D-9CD61CC67DFC} = {3D14A518-7B83-4845-A88D-9CD61CC67DFC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Infrastructure", "GraphQL\GraphQL.Infrastructure.csproj", "{3D14A518-7B83-4845-A88D-9CD61CC67DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.Domain", "GraphQL.Domain\GraphQL.Domain.csproj", "{823B89C2-2E9A-4967-8023-82ED43F1AF83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABB58B0A-C141-4626-A164-88A2B2D063FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB58B0A-C141-4626-A164-88A2B2D063FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB58B0A-C141-4626-A164-88A2B2D063FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB58B0A-C141-4626-A164-88A2B2D063FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D14A518-7B83-4845-A88D-9CD61CC67DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D14A518-7B83-4845-A88D-9CD61CC67DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D14A518-7B83-4845-A88D-9CD61CC67DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D14A518-7B83-4845-A88D-9CD61CC67DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823B89C2-2E9A-4967-8023-82ED43F1AF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823B89C2-2E9A-4967-8023-82ED43F1AF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823B89C2-2E9A-4967-8023-82ED43F1AF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823B89C2-2E9A-4967-8023-82ED43F1AF83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F96B93A7-5040-489C-8D96-8608B6C41588}
+	EndGlobalSection
+EndGlobal
