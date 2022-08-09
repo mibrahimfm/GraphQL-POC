@@ -1,4 +1,5 @@
-﻿using GraphQL.Server;
+﻿using GraphQL.Infrastructure.GraphQL;
+using GraphQL.Server;
 using GraphQL.Server.Ui.Playground;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Routing;
