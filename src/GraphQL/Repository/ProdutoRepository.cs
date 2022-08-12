@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GraphQL.Infrastructure.Repository
 {
@@ -59,19 +57,22 @@ namespace GraphQL.Infrastructure.Repository
         {
             if (preco.Valor > 0.0)
             {
-                produtos.FirstOrDefault(x => x.Codigo == codigo).Preco.Valor = preco.Valor;
+                produtos.First(x => x.Codigo == codigo).Preco.Valor = preco.Valor;
             }
             if (preco.DescontoAVista > (decimal)0.0)
             {
-                produtos.FirstOrDefault(x => x.Codigo == codigo).Preco.DescontoAVista = preco.DescontoAVista;
+                produtos.First(x => x.Codigo == codigo).Preco.DescontoAVista = preco.DescontoAVista;
             }
-            return produtos.Where(x => x.Codigo == codigo).FirstOrDefault();
+            return produtos.First(x => x.Codigo == codigo);
         }
 
         public Produto Excluir(string codigo)
         {
-            Produto produto = produtos.Where(x => x.Codigo == codigo).FirstOrDefault();
-            produtos.Remove(produto);
+            Produto produto = produtos.FirstOrDefault(x => x.Codigo == codigo);
+            if (produto != default)
+            {
+                produtos.Remove(produto);
+            }
             return produto;
         }
     }
